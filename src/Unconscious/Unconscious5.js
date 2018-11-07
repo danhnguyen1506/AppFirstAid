@@ -41,12 +41,12 @@ class Unconscious5 extends Component {
                   <Text style={styles.buttonText}>BẤT TỈNH</Text>
                   <Text style={styles.text}>Xác định tư thế nạn nhân</Text>
 
-                  <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-end', left: 20, width: 50, height: 50, justifyContent: 'center'}}
+                  <TouchableOpacity style={commonStyles.goBack}
                     onPress = {() => this.props.navigation.goBack()}>
                     <Icon name = 'ios-undo' type='ionicon' size={35}/>
                   </TouchableOpacity>
 
-                  <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-start', right: 20}}
+                  <TouchableOpacity style={commonStyles.toLogin}
                     onPress = {() => this.props.navigation.navigate('Login')}>
                     <Icon name = 'home' type='entyco' size={35}/>
                   </TouchableOpacity>

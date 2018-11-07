@@ -124,18 +124,18 @@ render() {
           <Text style={styles.buttonText}>GÃY XƯƠNG</Text>
           <Text style={styles.text}>Xử lý gãy rạn nứt xương</Text>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-end', left: 20, width: 50, height: 50, justifyContent: 'center'}}
+          <TouchableOpacity style={commonStyles.goBack}
             onPress = {() => this.props.navigation.goBack() && song.stop(song = null)}>
             <Icon name = 'ios-undo' type='ionicon' size={35}/>
           </TouchableOpacity>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-start', right: 20}}
+          <TouchableOpacity style={commonStyles.toLogin}
             onPress = {() => this.props.navigation.navigate('Login') && song.stop(song = null)}>
             <Icon name = 'home' type='entyco' size={35}/>
           </TouchableOpacity>
         </View>
         <PageControl
-          style={{position:'absolute', alignSelf: 'flex-start', right: 30, bottom:10, elevation: 1}}
+          style={commonStyles.pageControl}
           numberOfPages={1}
           currentPage={this.state.currentPage}
           pageIndicatorTintColor='white'
@@ -158,7 +158,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}} onLayout={this.onPressButtonPlay}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={require('../../assets/gif/bone/bone1_1.gif')}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Nạn nhân cảm thấy đau, sưng, bầm tím, biến dạng, không sử dụng phần chi đó như thông thường.
                   </Text>

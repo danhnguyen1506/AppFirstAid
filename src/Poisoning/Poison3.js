@@ -129,19 +129,19 @@ render() {
           <Text style={styles.buttonText}>NHIỄM ĐỘC</Text>
           <Text style={styles.text}>Bị tiêm vào trong</Text>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-end', left: 20, width: 50, height: 50, justifyContent: 'center'}}
+          <TouchableOpacity style={commonStyles.goBack}
             onPress = {() => this.props.navigation.goBack()}>
             <Icon name = 'ios-undo' type='ionicon' size={35}/>
           </TouchableOpacity>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-start', right: 20}}
+          <TouchableOpacity style={commonStyles.toLogin}
             onPress = {() => this.props.navigation.navigate('Login')}>
             <Icon name = 'home' type='entyco' size={35}/>
           </TouchableOpacity>
         </View>
 
         <PageControl
-          style={{position:'absolute', alignSelf: 'flex-start', right: 30, bottom:10, elevation: 1}}
+          style={commonStyles.pageControl}
           numberOfPages={3}
           currentPage={this.state.currentPage}
           pageIndicatorTintColor='white'
@@ -164,14 +164,14 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={require('../../assets/gif/bone/bone3_3.gif')}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Quấn chặt khu vực bị tiêm với băng, gạc hoặc vải mềm. Nếu đủ băng, 
                   gạc thì quấn cả chi để trì hoãn nọc độc vào máu.
                   </Text>
 
                   
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
@@ -182,7 +182,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={require('../../assets/gif/bone/bone2_2.gif')}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Cố định toàn chi bị tiêm bằng cách bó chi vào nẹp/thanh cứng để hạn chế 
                   tối đa cử động của chi đó.
@@ -190,7 +190,7 @@ render() {
 
                   
 
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
@@ -204,7 +204,7 @@ render() {
                   <Image style={commonStyles.image} 
                   // source={require('../GIF/bite4_4.jpg')}
                   />
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Nếu có thể, khiêng nạn nhân di chuyển đến cơ sở y tế, không cho phép 
                   nạn nhân tự bước hay di chuyển.
@@ -212,7 +212,7 @@ render() {
 
                   
 
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 

@@ -124,18 +124,18 @@ render() {
           <Text style={styles.buttonText}>CHẢY MÁU</Text>
           <Text style={styles.text}>Vết cắt sâu ở chi</Text>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-end', left: 20, width: 50, height: 50, justifyContent: 'center'}}
+          <TouchableOpacity style={commonStyles.goBack}
             onPress = {() => this.props.navigation.goBack() && song.stop(song = null)}>
             <Icon name = 'ios-undo' type='ionicon' size={35}/>
           </TouchableOpacity>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-start', right: 20}}
+          <TouchableOpacity style={commonStyles.toLogin}
             onPress = {() => this.props.navigation.navigate('Login') && song.stop(song = null)}>
             <Icon name = 'home' type='entyco' size={35}/>
           </TouchableOpacity>
         </View>
         <PageControl
-          style={{position:'absolute', alignSelf: 'flex-start', right: 30, bottom:10, elevation: 1}}
+          style={commonStyles.pageControl}
           numberOfPages={3}
           currentPage={this.state.currentPage}
           pageIndicatorTintColor='white'
@@ -158,11 +158,11 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}} onLayout={this.onPressButtonPlay}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={require('../../assets/gif/bleeding/bleeding7_1.gif')}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.text}>
                   Dùng tay bóp chặt lên vết thương để tạo áp lực ngăn máu chảy.
                   </Text>
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
@@ -173,11 +173,11 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={require('../../assets/gif/bleeding/bleeding7_2.gif')}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Dùng gạc thấm nước, hoặc gạc không dính hoặc vải sạch để che vết thương.
                   </Text>
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
                     </TouchableOpacity>
@@ -187,12 +187,12 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Sau đó dùng băng thun quấn chặt vết thương để tạo áp lực cầm máu. Nếu thấy máu đỏ tươi thấm qua lớp băng bó, 
                   không tháo bỏ lớp băng đó ra mà thêm băng gạc áp tròng lên phía trên và tạo thêm áp lực cầm máu.
                   </Text>
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
                     </TouchableOpacity>

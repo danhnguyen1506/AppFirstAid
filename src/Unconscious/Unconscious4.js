@@ -119,18 +119,18 @@ render() {
           <Text style={styles.buttonText}>BẤT TỈNH</Text>
           <Text style={styles.text}>Kiểm tra khu vực đau đớn của nạn nhân</Text>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-end', left: 20, width: 50, height: 50, justifyContent: 'center'}}
+          <TouchableOpacity style={commonStyles.goBack}
             onPress = {() => this.props.navigation.goBack()}>
             <Icon name = 'ios-undo' type='ionicon' size={35}/>
           </TouchableOpacity>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-start', right: 20}}
+          <TouchableOpacity style={commonStyles.toLogin}
             onPress = {() => this.props.navigation.navigate('Login')}>
             <Icon name = 'home' type='entyco' size={35}/>
           </TouchableOpacity>
         </View>
         <PageControl
-          style={{position:'absolute', alignSelf: 'flex-start', right: 30, bottom:10, elevation: 1}}
+          style={commonStyles.pageControl}
           numberOfPages={2}
           currentPage={this.state.currentPage}
           pageIndicatorTintColor='white'
@@ -153,7 +153,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={gifs.unconscious4_1}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Nếu vị trí vết thương, sự đau đớn hoặc bệnh lý nằm <Text style={{fontWeight: 'bold'}}>từ phía xương sườn trở lên</Text>, 
                   liên quan đến tim và thở khó khăn: Để nạn nhân ngồi thẳng.

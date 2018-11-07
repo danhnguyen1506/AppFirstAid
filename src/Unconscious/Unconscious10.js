@@ -134,18 +134,18 @@ render() {
           <Text style={styles.buttonText}>BẤT TỈNH</Text>
           <Text style={styles.text}>Không thở</Text>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-end', left: 20, width: 50, height: 50, justifyContent: 'center'}}
+          <TouchableOpacity style={commonStyles.goBack}
             onPress = {() => this.props.navigation.goBack()}>
             <Icon name = 'ios-undo' type='ionicon' size={35}/>
           </TouchableOpacity>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-start', right: 20}}
+          <TouchableOpacity style={commonStyles.toLogin}
             onPress = {() => this.props.navigation.navigate('Login')}>
             <Icon name = 'home' type='entyco' size={35}/>
           </TouchableOpacity>
         </View>
         <PageControl
-          style={{position:'absolute', alignSelf: 'flex-start', right: 30, bottom:10, elevation: 1}}
+          style={commonStyles.pageControl}
           numberOfPages={4}
           currentPage={this.state.currentPage}
           pageIndicatorTintColor='white'
@@ -168,7 +168,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={gifs.unconscious10}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.text}>
                   Khi nạn nhân không có dấu hiệu thở hoặc thở bất thường.
                   </Text>
@@ -177,7 +177,7 @@ render() {
                   </Text>
 
                   
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
@@ -188,7 +188,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={gifs.unconscious11_1}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.text}>
                   Cách thực hiện thao tác hồi sinh tim phổi CPR. Ấn tim ngoài lồng ngực.
                   </Text>
@@ -197,7 +197,7 @@ render() {
                   to bản trên ngực nạn nhân nếu có.
                   </Text>
 
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
@@ -209,7 +209,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={gifs.unconscious11_2}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Quỳ 2 chân sát bên ngực nạn nhân, 2 bàn tay lồng hoặc đặt chồng lên nhau.
                   </Text>
@@ -218,7 +218,7 @@ render() {
                   Dùng lực của vùng bụng, vùng lưng tạo lực ép đè lên giữa ngực nạn nhân.
                   </Text>                  
 
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
@@ -230,7 +230,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={gifs.unconscious11_3}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Lực đi theo phương thẳng đứng, xuống sâu 1/3 bề dày của ngực nạn nhân với tốc độ ép 100 - 120 lần/ phút. 
                   Sau 30 lần tạo lực ép lên ngực nạn nhân, đẩy nhẹ cổ nạn nhân ngửa ra sau để mở miệng nạn nhân ra. 
@@ -240,7 +240,7 @@ render() {
                   Tiếp tục như vậy cho đến khi xe cứu thương đến.
                   </Text>
 
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={styles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 

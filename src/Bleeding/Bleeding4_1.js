@@ -124,7 +124,7 @@ render() {
     return (
       <View style={commonStyles.container}>
         <PageControl
-          style={{position:'absolute', alignSelf: 'flex-start', right: 30, bottom:10, elevation: 1}}
+          style={commonStyles.pageControl}
           numberOfPages={1}
           currentPage={this.state.currentPage}
           pageIndicatorTintColor='white'
@@ -183,7 +183,7 @@ render() {
                   </Text>
 
                   
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>

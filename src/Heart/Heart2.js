@@ -121,18 +121,18 @@ render() {
           <Text style={styles.buttonText}>NHỒI MÁU CƠ TIM</Text>
           <Text style={styles.text}>Sử dụng máy sốc tim ngoài tự động AAD</Text>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-end', left: 20, width: 50, height: 50, justifyContent: 'center'}}
+          <TouchableOpacity style={commonStyles.goBack}
             onPress = {() => this.props.navigation.goBack()}>
             <Icon name = 'ios-undo' type='ionicon' size={35}/>
           </TouchableOpacity>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-start', right: 20}}
+          <TouchableOpacity style={commonStyles.toLogin}
             onPress = {() => this.props.navigation.navigate('Login')}>
             <Icon name = 'home' type='entyco' size={35}/>
           </TouchableOpacity>
         </View>
         <PageControl
-          style={{position:'absolute', alignSelf: 'flex-start', right: 30, bottom:10, elevation: 1}}
+          style={commonStyles.pageControl}
           numberOfPages={4}
           currentPage={this.state.currentPage}
           pageIndicatorTintColor='white'
@@ -155,7 +155,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={require('../../assets/gif/heart/heart2_1.gif')}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Thực hiện thao tác hồi sinh tim phổi CPR trong lúc đợi người lấy máy sốc tim ngoài tự động đến.
                   </Text>
@@ -167,7 +167,7 @@ render() {
                   Khi sử dụng máy sốc tim ngoài AAD, nạn nhân cần phải được đặt trên mặt phẳng cứng, khô ráo và ngực trần.
                   </Text>
                   
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
          
@@ -177,7 +177,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={require('../../assets/gif/heart/heart2_2.gif')}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Mở máy AAD lên. Tháo 2 miếng pad cực điện, gỡ bỏ miếng dính phía mặt sau của miếng pad.
                   </Text>
@@ -186,7 +186,7 @@ render() {
                   2 cực điện và có dòng điện truyền qua.
                   </Text>
                   
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
           
@@ -196,7 +196,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={require('../../assets/gif/heart/heart2_3.gif')}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Máy sẽ đo hoạt động điện từ của tim để quyết định đưa ra cú giật sốc điện hợp lí.
                   </Text>
@@ -207,7 +207,7 @@ render() {
                   Lúc này, những người sơ cứu cần tránh tiếp xúc với nạn nhân để không bị truyền điện.
                   </Text>
                   
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
@@ -218,7 +218,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={require('../../assets/gif/heart/heart2_4.gif')}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Sau khi máy sốc điện gây giật tim cho nạn nhân, nạn nhân có thể được an toàn để tiếp xúc.
                   </Text>
@@ -228,7 +228,7 @@ render() {
 
                   
 
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 

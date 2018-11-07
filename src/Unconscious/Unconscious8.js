@@ -124,18 +124,18 @@ render() {
           <Text style={styles.buttonText}>BẤT TỈNH</Text>
           <Text style={styles.text}>Nạn nhân nằm ngửa CÓ chấn thương cột sống cổ</Text>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-end', left: 20, width: 50, height: 50, justifyContent: 'center'}}
+          <TouchableOpacity style={commonStyles.goBack}
             onPress = {() => this.props.navigation.goBack() && song.stop(song = null)}>
             <Icon name = 'ios-undo' type='ionicon' size={35}/>
           </TouchableOpacity>
 
-          <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-start', right: 20}}
+          <TouchableOpacity style={commonStyles.toLogin}
             onPress = {() => this.props.navigation.navigate('Login') && song.stop(song = null)}>
             <Icon name = 'home' type='entyco' size={35}/>
           </TouchableOpacity>
         </View>
         <PageControl
-          style={{position:'absolute', alignSelf: 'flex-start', right: 30, bottom:10, elevation: 1}}
+          style={commonStyles.pageControl}
           numberOfPages={5}
           currentPage={this.state.currentPage}
           pageIndicatorTintColor='white'
@@ -158,7 +158,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}} onLayout={this.onPressButtonPlay}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={gifs.unconscious8_1}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.text2}>
                   Trường hợp nạn nhân bất tỉnh, còn thở và có nghi ngờ chấn thương cột sống cổ thường do va 
                   chạm mạnh hoặc có rơi té từ trên cao.
@@ -179,7 +179,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={gifs.unconscious8_2}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Bạn sẽ làm nhóm trưởng để xác định lăn nạn nhân về phía nào là tốt nhất cho họ. 
                   Sau đó, đưa cánh tay sẽ lăn qua của nạn nhân lên cao hoặc ngang vai, để khi lăn nghiêng thì nạn 
@@ -202,7 +202,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={gifs.unconscious8_3}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Những người trợ giúp sẽ kéo sát cánh tay còn lại của nạn nhân ép vào thân mình của nạn nhân. 
                   Tay của người trợ giúp bám chắc vào phần thân, bao gồm cả cánh tay của nạn nhân ở vị trí vai, hông, 
@@ -223,7 +223,7 @@ render() {
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={commonStyles.slide1}>
                   <Image style={commonStyles.image} source={gifs.unconscious8_4}/>
-                  <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
+                  <Text style={commonStyles.barbell}></Text>
                   <Text style={styles.semiButtonText}>
                   Nhóm trưởng đảm bảo những người trợ giúp ở đúng tư thế và đếm "1, 2, 3" để ra hiệu 
                   lệnh. Khi tất cả sẵn sàng, nhóm trưởng ra hiệu lệnh để đồng bộ lăn phần đầu, cổ, cột sống và 
