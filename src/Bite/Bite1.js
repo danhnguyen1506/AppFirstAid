@@ -4,6 +4,7 @@ import PageControl from 'react-native-page-control';
 import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 var SoundPlayer = require('react-native-sound');
@@ -169,8 +170,8 @@ render() {
             // onTouchCancel = {this.onPressButtonStop}
         >
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={require('../../assets/image/rancan.jpg')}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={require('../../assets/image/rancan.jpg')}/>
                   <Text style={styles.semiButtonText}>
                   Nạn nhân cần tuyệt đối bất động khi bị rắn cắn. Các nọc độc đang đang nằm dưới da.
                   </Text>
@@ -184,8 +185,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={require('../../assets/gif/bite/bite1_2.gif')}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={require('../../assets/gif/bite/bite1_2.gif')}/>
                   <Text style={styles.semiButtonText}>
                   Dùng băng thun bó vết rắn cắn.
                   </Text>
@@ -202,8 +203,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={require('../../assets/gif/bite/bite1_3.gif')}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={require('../../assets/gif/bite/bite1_3.gif')}/>
                   <Text style={styles.semiButtonText}>
                   Sau đó, băng bó cả chi để nạn nhân hạn chế cử động.
                   </Text>
@@ -220,8 +221,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image}/>
                   <Text style={styles.semiButtonText}>
                   Nhanh chóng khiêng, cõng hoặc cáng nạn nhân đến bệnh viện.
                   </Text>

@@ -4,6 +4,7 @@ import PageControl from 'react-native-page-control';
 import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 var SoundPlayer = require('react-native-sound');
@@ -118,8 +119,8 @@ class Softtisue1 extends Component {
 render() {
     
     return (
-      <View style={styles.container}>
-        <View style={styles.headerTitle}>
+      <View style={commonStyles.container}>
+        <View style={commonStyles.headerTitle}>
           <Text style={styles.buttonText}>GÂN, CƠ, BẦM</Text>
 
           <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-end', left: 20, width: 50, height: 50, justifyContent: 'center'}}
@@ -143,7 +144,7 @@ render() {
           indicatorSize={{width:9, height:9}}
           />
         <ViewPagerAndroid
-            style={styles.container}
+            style={commonStyles.container}
             initialPage={0}
             peekEnable={true}
             pageMargin={-width + width/1.09}
@@ -154,8 +155,8 @@ render() {
             // onTouchCancel = {this.onPressButtonStop}
         >
               <View style={{justifyContent: 'center', alignItems: 'center'}} onLayout={this.onPressButtonPlay}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={require('../../assets/gif/softtisue/softtisue1_1.gif')}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={require('../../assets/gif/softtisue/softtisue1_1.gif')}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Đối với chấn thương mô mềm, tốt nhất là để nạn nhân nghĩ ngơi hoàn toàn.
@@ -164,7 +165,7 @@ render() {
                   Dùng băng thun quấn vùng bị tổn thương, nâng cao phần bị tổn thương và chườm đá để giảm đau.
                   </Text>
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', top: height/2.75,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
         
@@ -172,8 +173,8 @@ render() {
               </View>
  
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} 
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} 
                   // source={require('../GIF/bite4_4.jpg')}
                   />
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
@@ -183,7 +184,7 @@ render() {
                   </Text>
                   
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', top: height/2.75,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>    
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
                     </TouchableOpacity>
         

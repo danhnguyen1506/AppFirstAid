@@ -4,6 +4,7 @@ import PageControl from 'react-native-page-control';
 import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 var SoundPlayer = require('react-native-sound');
@@ -122,8 +123,8 @@ class Unconscious12 extends Component {
 render() {
     
     return (
-      <View style={styles.container}>
-        <View style={styles.headerTitle}>
+      <View style={commonStyles.container}>
+        <View style={commonStyles.headerTitle}>
           <Text style={styles.buttonText}>BẤT TỈNH</Text>
           <Text style={styles.text}>Hướng dẫn ép tim ngoài lồng ngực</Text>
 
@@ -148,7 +149,7 @@ render() {
           indicatorSize={{width:9, height:9}}
           />
         <ViewPagerAndroid
-            style={styles.container}
+            style={commonStyles.container}
             initialPage={0}
             peekEnable={true}
             pageMargin={-width + width/1.09}
@@ -157,8 +158,8 @@ render() {
             onPageSelected = {this.handleChange}
         >
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={gifs.unconscious12_1}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={gifs.unconscious12_1}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Qùy gối bên nạn nhân đang nằm ngửa.
@@ -166,7 +167,7 @@ render() {
 
   
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
 
@@ -174,8 +175,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Đặt lòng 1 bàn tay vào chính giữa ngực nạn nhân ( ngay dưới đoạn xương nối giữa 2 lồng ngực) 
@@ -184,7 +185,7 @@ render() {
 
   
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
                     </TouchableOpacity>
@@ -193,8 +194,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Đặt bàn tay còn lại lên trên bàn tay kia.
@@ -203,7 +204,7 @@ render() {
           
 
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
                     </TouchableOpacity>
@@ -212,8 +213,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Dùng phần thân trên của mình tạ lực ép thẳng xuống qua 2 bàn tay với lực ấn 
@@ -223,7 +224,7 @@ render() {
 
 
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
                     </TouchableOpacity>
@@ -232,8 +233,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Lưu ý - Gọi cấp cứu 115 ngay lập tức
@@ -242,7 +243,7 @@ render() {
        
 
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
                     </TouchableOpacity>
@@ -251,8 +252,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Gọi người xung quanh hỗ trợ ép tim ngoài lồng ngực khi mỏi tay.
@@ -261,7 +262,7 @@ render() {
                
 
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
                     </TouchableOpacity>

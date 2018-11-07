@@ -4,6 +4,7 @@ import PageControl from 'react-native-page-control';
 import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 var SoundPlayer = require('react-native-sound');
@@ -123,8 +124,8 @@ class Unconscious3 extends Component {
 render() {
     
     return (
-      <View style={styles.container}>
-        <View style={styles.headerTitle}>
+      <View style={commonStyles.container}>
+        <View style={commonStyles.headerTitle}>
           <Text style={styles.buttonText}>BẤT TỈNH</Text>
           <Text style={styles.text}>Mất ý thức</Text>
 
@@ -149,7 +150,7 @@ render() {
           indicatorSize={{width:9, height:9}}
           />
         <ViewPagerAndroid
-            style={styles.container}
+            style={commonStyles.container}
             initialPage={0}
             peekEnable={true}
             pageMargin={-width + width/1.09}
@@ -160,8 +161,8 @@ render() {
             // onTouchCancel = {this.onPressButtonStop}
         >
               <View style={{justifyContent: 'center', alignItems: 'center'}} onLayout={this.onPressButtonPlay}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={gifs.c0004}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={gifs.c0004}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Nạn nhân không có dấu hiệu phản ứng là bất tỉnh.
@@ -182,7 +183,7 @@ render() {
                   Mắt hướng về bụng, ngực xem nhịp thở phập phồng hay không.
                   </Text>
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
                     </TouchableOpacity>
@@ -191,7 +192,7 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
+                <View style={commonStyles.slide1}>
                   <Text style={[styles.buttonText2,{top: 20}]}>TÌNH TRẠNG HIỆN TẠI CỦA NẠN NHÂN?</Text>
                     <View style={{ marginTop: height/2.3 }}>
                         <TouchableOpacity onPress={() => this.props.navigation.navigate('Unconscious5') && song.stop()}

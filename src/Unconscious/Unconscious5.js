@@ -4,6 +4,7 @@ import PageControl from 'react-native-page-control';
 import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 class Unconscious5 extends Component {
@@ -35,8 +36,8 @@ class Unconscious5 extends Component {
           }
         render() {
             return (
-              <View style={styles.container}>
-                <View style={styles.headerTitle}>
+              <View style={commonStyles.container}>
+                <View style={commonStyles.headerTitle}>
                   <Text style={styles.buttonText}>BẤT TỈNH</Text>
                   <Text style={styles.text}>Xác định tư thế nạn nhân</Text>
 

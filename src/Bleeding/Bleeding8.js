@@ -4,6 +4,7 @@ import PageControl from 'react-native-page-control';
 import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 var SoundPlayer = require('react-native-sound');
@@ -127,8 +128,8 @@ class Bleeding8 extends Component {
 render() {
     
     return (
-      <View style={styles.container}>
-        <View style={styles.headerTitle}>
+      <View style={commonStyles.container}>
+        <View style={commonStyles.headerTitle}>
           <Text style={styles.buttonText}>ĐÂM VÀO MẮT</Text>
 
           <TouchableOpacity style={{position: 'absolute', alignSelf: 'flex-end', left: 20, width: 50, height: 50, justifyContent: 'center'}}
@@ -152,7 +153,7 @@ render() {
           indicatorSize={{width:9, height:9}}
           />
         <ViewPagerAndroid
-            style={styles.container}
+            style={commonStyles.container}
             initialPage={0}
             peekEnable={true}
             pageMargin={-width + width/1.09}
@@ -163,8 +164,8 @@ render() {
             // onTouchCancel = {this.onPressButtonStop}
         >
               <View style={{justifyContent: 'center', alignItems: 'center'}} onLayout={this.onPressButtonPlay}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={require('../../assets/gif/bone/bone3_1.gif')}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={require('../../assets/gif/bone/bone3_1.gif')}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Không lấy dị vật ra.
@@ -175,7 +176,7 @@ render() {
 
                   
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
                
@@ -183,8 +184,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={require('../../assets/gif/bleeding/bleeding8_2.gif')}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={require('../../assets/gif/bleeding/bleeding8_2.gif')}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Sau đó đặt xung quanh mắt bị thương của nạn nhân.
@@ -193,7 +194,7 @@ render() {
                   
 
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
                     </TouchableOpacity>
@@ -202,8 +203,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={require('../../assets/gif/bleeding/bleeding8_3.gif')}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={require('../../assets/gif/bleeding/bleeding8_3.gif')}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Dùng băng thun quấn quanh đầu để cố định cuộn vải ở mắt. Chừa tầm nhìn 
@@ -213,7 +214,7 @@ render() {
                   
 
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
                     </TouchableOpacity>

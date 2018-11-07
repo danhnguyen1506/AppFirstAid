@@ -4,6 +4,7 @@ import PageControl from 'react-native-page-control';
 import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 var SoundPlayer = require('react-native-sound');
@@ -125,8 +126,8 @@ class Burn1 extends Component {
 render() {
     
     return (
-      <View style={styles.container}>
-        <View style={styles.headerTitle}>
+      <View style={commonStyles.container}>
+        <View style={commonStyles.headerTitle}>
           <Text style={styles.buttonText}>BỎNG/PHỎNG</Text>
           <Text style={styles.text}>Xử lý bỏng</Text>
 
@@ -151,7 +152,7 @@ render() {
           indicatorSize={{width:9, height:9}}
           />
         <ViewPagerAndroid
-            style={styles.container}
+            style={commonStyles.container}
             initialPage={0}
             peekEnable={true}
             pageMargin={-width + width/1.09}
@@ -162,8 +163,8 @@ render() {
             // onTouchCancel = {this.onPressButtonStop}
         >
               <View style={{justifyContent: 'center', alignItems: 'center'}} onLayout={this.onPressButtonPlay}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image}/>
                   <Text style={[styles.buttonText, {fontSize: 21, marginTop: 20}]}>
                   Tuyệt đối KHÔNG làm những việc sau đây:
                   </Text>
@@ -183,8 +184,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}} onLayout={this.onPressButtonPlay}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={require('../../assets/gif/burn/burn2_1.gif')}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={require('../../assets/gif/burn/burn2_1.gif')}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText1}>
                   Làm mát làn da bị bỏng dưới vòi nước, trung bình từ 15-20 phút.
@@ -206,7 +207,7 @@ render() {
                   bệnh viện.
                   </Text>
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
                     </TouchableOpacity>
              
@@ -214,14 +215,14 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}} onLayout={this.onPressButtonPlay}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={require('../../assets/gif/burn/burn3_1.gif')}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={require('../../assets/gif/burn/burn3_1.gif')}/>
                   <Text style={styles.semiButtonText}>
                   Cần che chắn vết bỏng bằng ni lông để hạn chế bụi, côn trùng bám vào vết 
                   bỏng gây nhiễm trùng. Tuyệt đối không dùng chất liệu vải để che vết bỏng.
                   </Text>
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
           
@@ -229,13 +230,13 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={require('../../assets/gif/burn/burn3_2.gif')}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={require('../../assets/gif/burn/burn3_2.gif')}/>
                   <Text style={styles.semiButtonText}>
                   Nếu nạn nhân quá đau đớn, có thể dùng đá chườm nhẹ bên ngoài để giảm đau.
                   </Text>
                     <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
                     </TouchableOpacity>
             

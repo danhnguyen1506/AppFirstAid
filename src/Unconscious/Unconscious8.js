@@ -4,6 +4,7 @@ import PageControl from 'react-native-page-control';
 import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 var SoundPlayer = require('react-native-sound');
@@ -118,8 +119,8 @@ class Unconscious8 extends Component {
 render() {
     
     return (
-      <View style={styles.container}>
-        <View style={styles.headerTitle}>
+      <View style={commonStyles.container}>
+        <View style={commonStyles.headerTitle}>
           <Text style={styles.buttonText}>BẤT TỈNH</Text>
           <Text style={styles.text}>Nạn nhân nằm ngửa CÓ chấn thương cột sống cổ</Text>
 
@@ -144,7 +145,7 @@ render() {
           indicatorSize={{width:9, height:9}}
           />
         <ViewPagerAndroid
-            style={styles.container}
+            style={commonStyles.container}
             initialPage={0}
             peekEnable={true}
             pageMargin={-width + width/1.09}
@@ -155,8 +156,8 @@ render() {
             // onTouchCancel = {this.onPressButtonStop}
         >
               <View style={{justifyContent: 'center', alignItems: 'center'}} onLayout={this.onPressButtonPlay}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={gifs.unconscious8_1}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={gifs.unconscious8_1}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.text2}>
                   Trường hợp nạn nhân bất tỉnh, còn thở và có nghi ngờ chấn thương cột sống cổ thường do va 
@@ -168,7 +169,7 @@ render() {
 
                   
                     <TouchableOpacity style={{ position: 'absolute', margin: 15, marginTop: '83.5%',height: 40,  right: 0.1, width: 40, justifyContent: 'center', alignSelf: 'flex-start'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
                   
@@ -176,8 +177,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={gifs.unconscious8_2}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={gifs.unconscious8_2}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Bạn sẽ làm nhóm trưởng để xác định lăn nạn nhân về phía nào là tốt nhất cho họ. 
@@ -190,7 +191,7 @@ render() {
                   
 
                     <TouchableOpacity style={{ position: 'absolute', margin: 15, marginTop: '83.5%',height: 40,  right: 0.1, width: 40, justifyContent: 'center', alignSelf: 'flex-start'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
                     </TouchableOpacity>
@@ -199,8 +200,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={gifs.unconscious8_3}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={gifs.unconscious8_3}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Những người trợ giúp sẽ kéo sát cánh tay còn lại của nạn nhân ép vào thân mình của nạn nhân. 
@@ -211,7 +212,7 @@ render() {
                   
 
                     <TouchableOpacity style={{ position: 'absolute', margin: 15, marginTop: '83.5%',height: 40,  right: 0.1, width: 40, justifyContent: 'center', alignSelf: 'flex-start'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
                     </TouchableOpacity>
@@ -220,8 +221,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={gifs.unconscious8_4}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={gifs.unconscious8_4}/>
                   <Text style={{width: 50, height: 6, marginTop: 2, marginBottom: 10, backgroundColor: '#2699FB', alignSelf:'flex-start'}}></Text>
                   <Text style={styles.semiButtonText}>
                   Nhóm trưởng đảm bảo những người trợ giúp ở đúng tư thế và đếm "1, 2, 3" để ra hiệu 
@@ -234,7 +235,7 @@ render() {
                   
 
                     <TouchableOpacity style={{ position: 'absolute', margin: 15, marginTop: '83.5%',height: 40,  right: 0.1, width: 40, justifyContent: 'center', alignSelf: 'flex-start'}} onPress={this.onPressButtonMute.bind(this)}>
-                      <View style={styles.overlay}/>
+                      <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
                     </TouchableOpacity>
@@ -243,7 +244,7 @@ render() {
               </View>
               
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
+                <View style={commonStyles.slide1}>
                   <View style={{ justifyContent: 'center',alignItems: 'center', marginBottom: 20}}>
                     <Text style={styles.buttonText}>
                     LƯU Ý

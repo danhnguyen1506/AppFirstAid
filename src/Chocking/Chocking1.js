@@ -3,6 +3,7 @@ import { View, Text, Button, TouchableOpacity, StyleSheet, Image, BackHandler, D
 import { YellowBox } from 'react-native';
 import { HeaderBackButton } from 'react-navigation'
 import { Icon } from 'react-native-elements'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 var SoundPlayer = require('react-native-sound');

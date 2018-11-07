@@ -3,6 +3,7 @@ import { View, Text, Button, TouchableOpacity, StyleSheet, Image, ViewPagerAndro
 import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 class Poison extends Component {

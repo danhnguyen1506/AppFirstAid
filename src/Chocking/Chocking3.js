@@ -4,6 +4,7 @@ import PageControl from 'react-native-page-control';
 import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 var SoundPlayer = require('react-native-sound');
@@ -112,8 +113,8 @@ class Chocking3 extends Component {
 render() {
     
     return (
-      <View style={styles.container}>
-        <View style={styles.headerTitle}>
+      <View style={commonStyles.container}>
+        <View style={commonStyles.headerTitle}>
           <Text style={styles.buttonText}>HÓC</Text>
           <Text style={styles.text}>Không tự ho được</Text>
 
@@ -138,7 +139,7 @@ render() {
           indicatorSize={{width:9, height:9}}
           />
         <ViewPagerAndroid
-            style={styles.container}
+            style={commonStyles.container}
             initialPage={0}
             peekEnable={true}
             pageMargin={-width + width/1.09}
@@ -149,7 +150,7 @@ render() {
             // onTouchCancel = {this.onPressButtonStop}
         >
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
+                <View style={commonStyles.slide1}>
                   <View style={{ justifyContent: 'center',alignItems: 'center', marginBottom: 10, marginTop: 10}}>
                     <Text style={styles.buttonText}>
                     Nếu nạn nhân không ho được, thì đây là trường hợp cấp cứu, họ có thể tử vong nhanh.

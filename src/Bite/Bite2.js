@@ -4,6 +4,7 @@ import PageControl from 'react-native-page-control';
 import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 var SoundPlayer = require('react-native-sound');
@@ -138,7 +139,7 @@ class Bite2 extends Component {
 render() {
     
     return (
-      <View style={styles.container}>
+      <View style={commonStyles.container}>
         <PageControl
           style={{position:'absolute', left:0, right:0, bottom:10}}
           numberOfPages={2}
@@ -150,7 +151,7 @@ render() {
           indicatorSize={{width:9, height:9}}
           />
         <ViewPagerAndroid
-            style={styles.container}
+            style={commonStyles.container}
             initialPage={0}
             peekEnable={true}
             pageMargin={-width + width/1.1}
@@ -161,8 +162,8 @@ render() {
             // onTouchCancel = {this.onPressButtonStop}
         >
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={require('../../assets/gif/bite/bite2_1.gif')}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={require('../../assets/gif/bite/bite2_1.gif')}/>
                   <Text style={styles.semiButtonText}>
                   Quan sát vùng bị ong hoặc côn trùng cắn, đốt. Nếu có vòi, 
                   dùng móng tay khẩy nhẹ cho vòi rớt ra.
@@ -180,8 +181,8 @@ render() {
               </View>
 
               <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                <View style={styles.slide1}>
-                  <Image style={styles.image} source={require('../../assets/gif/bite/bite2_2.gif')}/>
+                <View style={commonStyles.slide1}>
+                  <Image style={commonStyles.image} source={require('../../assets/gif/bite/bite2_2.gif')}/>
                   <Text style={styles.semiButtonText}>
                   Sau đó chườm đá lên vùng da bị cắn, chích hoặc nhúng phần da vào nước 
                   mát khoảng 20 phút.
