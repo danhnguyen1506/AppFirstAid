@@ -181,7 +181,7 @@ render() {
 
                   <View style={{ position: 'absolute', margin: 18, alignSelf: 'flex-end', paddingRight:15}}>
 
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', marginTop: height/2.75,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 

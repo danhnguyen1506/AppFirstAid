@@ -6,6 +6,7 @@ import PageControl from 'react-native-page-control';
 import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { Linking } from 'react-native'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 

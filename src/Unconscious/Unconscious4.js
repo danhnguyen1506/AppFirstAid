@@ -163,8 +163,7 @@ render() {
                   Để nạn nhân nằm ngửa, đầu gối gập lại hoặc 2 chân được nâng lên cao.
                   </Text>
                   
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', 
-                    marginTop: height/2.6,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} 
+                    <TouchableOpacity style={commonStyles.muteButton} 
                     onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>

@@ -3,6 +3,7 @@ import { View, Text, Button, TouchableOpacity, StyleSheet, Image, ScrollView, Di
 import { Icon } from 'react-native-elements'
 import { YellowBox } from 'react-native';
 import * as images from '../common/images';
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 
@@ -161,7 +162,6 @@ const styles = StyleSheet.create({
 
   image: {
     flex: 1,
-    backgroundColor:"green",
     width: width/3.5,
     height: height/5.15,
     // marginTop: 20,

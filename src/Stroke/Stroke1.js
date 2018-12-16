@@ -5,7 +5,7 @@ import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
 // import SoundPlayer from 'react-native-sound';
-import BaseComponent from '../common/BaseComponent';
+// import BaseComponent from '../common/BaseComponent';
 import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
@@ -18,7 +18,7 @@ var list = [
   },
 ]
 
-class Stroke1 extends BaseComponent {
+class Stroke1 extends Component {
     
     static navigationOptions = ({ navigation }) => ({
             headerStyle:{
@@ -138,7 +138,7 @@ render() {
                   cấp cứu 115, và ngay lập tức làm thao tác hồi sinh tim phổi CPR cho nạn nhân 
                   trong chờ xe cấp cứu đến.
                   </Text>
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', top: height/3,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
@@ -152,10 +152,6 @@ render() {
 }
 
 const styles=StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#FFFFFF'
-    },
 
     buttonText: {
         fontWeight: 'bold',
@@ -174,48 +170,6 @@ const styles=StyleSheet.create({
       bottom: 2
     },
     
-    slide1: {
-        alignItems:'center',
-        flex: 1,
-        width: '90%',
-        padding: '5.5%',
-        paddingTop: 0,
-        // shadowColor: '#000',
-        shadowOffset: { width: 0, height: 0 },
-        // shadowOpacity: 2,
-        shadowRadius: 20,
-        elevation: 1,
-        borderColor:'white',
-        marginTop: '2.5%',
-        marginBottom: '8%',
-        backgroundColor:'#FFFFFF'
-    },
-
-    image: {
-      width: '114%',
-      height: '60%',
-      marginBottom: '5%',
-    },
-
-    
-    headerTitle: {
-      width: '100%', 
-      justifyContent:'center',
-      alignItems: 'center',
-      marginBottom: 30,
-      top: 20,
-    },
-
-    overlay: {
-      position: 'absolute',
-      left: 0,
-      top: 0,
-      opacity: 0.5,
-      backgroundColor: '#707070',
-      width: 40,
-      height: 40,
-      borderRadius: 20,
-    },
 })
 
 export default Stroke1

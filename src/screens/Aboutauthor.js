@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { View, Text, Button, TouchableOpacity, StyleSheet, Image, ScrollView, Dimensions } from 'react-native';
 import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 class Aboutauthor extends Component {

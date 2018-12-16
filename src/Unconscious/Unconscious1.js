@@ -56,13 +56,13 @@ class Unconscious1 extends BaseComponent {
     };
     this.handleChange = this.handleChange.bind(this);
     this.onPressButtonStop = this.onPressButtonStop.bind(this);
-    this.onPressButtonMute = this.onPressButtonMute.bind(this);
+    this.onPressButtonMute = MusicPlayer.onPressButtonMute.bind(this);
   }
 
   componentWillMount() {
     BackHandler.addEventListener("hardwareBackPress", function() {
-      if (song != null) {
-        song.stop(() => (song = null));
+      if (MusicPlayer.player != null) {
+        MusicPlayer.player.stop(() => (MusicPlayer.player = null));
       }
       return false;
     });
@@ -73,49 +73,38 @@ class Unconscious1 extends BaseComponent {
 
   handleAppStateChange(currentAppState) {
     if (currentAppState == "background") {
-      song.pause();
+      MusicPlayer.player.pause();
     }
     if (currentAppState == "active") {
-      song.play();
+      MusicPlayer.player.play();
     }
   }
 
   onPressButtonPlay() {
-    if (song == null) {
-      MusicPlayer.playFile("unconscious11.mp3");
-      // song = new SoundPlayer(
-      //   "unconscious11.mp3",
-      //   SoundPlayer.MAIN_BUNDLE,
-      //   () => {
-      //     song.setNumberOfLoops(-1).play(
-      //       () => song.release() //never called
-      //     );
-      //   }
-      // );
+    if (MusicPlayer.player == null) {
+      MusicPlayer.playFile('unconscious11.mp3')
     }
   }
 
-  onPressButtonMute() {
-    if (song != null) {
-      if (this.state.mute) {
-        song.setVolume(1);
-        this.setState({ icon: "unmute" });
-      } else {
-        song.setVolume(0);
-        this.setState({ icon: "mute" });
-      }
-      this.setState({ mute: !this.state.mute });
-    }
-  }
+  // onPressButtonMute() {
+  //   if (MusicPlayer.player != null) {
+  //     if (this.state.mute) {
+  //       MusicPlayer.player.setVolume(1);
+  //       this.setState({ icon: "unmute" });
+  //     } else {
+  //       MusicPlayer.player.setVolume(0);
+  //       this.setState({ icon: "mute" });
+  //     }
+  //     this.setState({ mute: !this.state.mute });
+  //   }
+  // }
 
   onPressButtonStop(state) {
     if (this.state.icon === "unmute") {
       if (state === "idle") {
-        song.stop().release();
-        song = new SoundPlayer(this.state.name, SoundPlayer.MAIN_BUNDLE, () => {
-          song.setNumberOfLoops(-1).play(() => song.release());
-        });
-      } else song.stop();
+        MusicPlayer.player.stop().release();
+        MusicPlayer.playFile(this.state.name)
+      } else MusicPlayer.player.stop();
     }
   }
 
@@ -146,7 +135,7 @@ class Unconscious1 extends BaseComponent {
           <TouchableOpacity
             style={commonStyles.goBack}
             onPress={() =>
-              this.props.navigation.goBack() && song.stop((song = null))
+              this.props.navigation.goBack() && MusicPlayer.player.stop((MusicPlayer.player = null))
             }
           >
             <Icon name="ios-undo" type="ionicon" size={35} />
@@ -156,7 +145,7 @@ class Unconscious1 extends BaseComponent {
             style={commonStyles.toLogin}
             onPress={() =>
               this.props.navigation.navigate("Login") &&
-              song.stop((song = null))
+              MusicPlayer.player.stop((MusicPlayer.player = null))
             }
           >
             <Icon name="home" type="entyco" size={35} />
@@ -324,7 +313,7 @@ class Unconscious1 extends BaseComponent {
                 <TouchableOpacity
                   onPress={() =>
                     this.props.navigation.navigate("Unconscious4") &&
-                    song.stop(() => (song = null))
+                    MusicPlayer.player.stop(() => (MusicPlayer.player = null))
                   }
                   style={commonStyles.button}
                 >
@@ -336,7 +325,7 @@ class Unconscious1 extends BaseComponent {
                 <TouchableOpacity
                   onPress={() =>
                     this.props.navigation.navigate("Unconscious3") &&
-                    song.stop(() => (song = null))
+                    MusicPlayer.player.stop(() => (MusicPlayer.player = null))
                   }
                   style={commonStyles.button}
                 >

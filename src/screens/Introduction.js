@@ -4,6 +4,7 @@ import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
 import { Linking } from 'react-native'
+import commonStyles from '../common/Styles'
 
 var {width, height} = Dimensions.get('window')
 class Introduction extends Component {

@@ -168,7 +168,7 @@ render() {
                   </Text>
 
                   
-                    <TouchableOpacity style={{ position: 'absolute', margin: 15, marginTop: '83.5%',height: 40,  right: 0.1, width: 40, justifyContent: 'center', alignSelf: 'flex-start'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
@@ -190,7 +190,7 @@ render() {
 
                   
 
-                    <TouchableOpacity style={{ position: 'absolute', margin: 15, marginTop: '83.5%',height: 40,  right: 0.1, width: 40, justifyContent: 'center', alignSelf: 'flex-start'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
@@ -211,7 +211,7 @@ render() {
 
                   
 
-                    <TouchableOpacity style={{ position: 'absolute', margin: 15, marginTop: '83.5%',height: 40,  right: 0.1, width: 40, justifyContent: 'center', alignSelf: 'flex-start'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 
@@ -234,7 +234,7 @@ render() {
 
                   
 
-                    <TouchableOpacity style={{ position: 'absolute', margin: 15, marginTop: '83.5%',height: 40,  right: 0.1, width: 40, justifyContent: 'center', alignSelf: 'flex-start'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
 

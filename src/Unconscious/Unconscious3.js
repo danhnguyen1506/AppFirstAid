@@ -60,8 +60,8 @@ class Unconscious3 extends Component {
 
     onPressButtonPlay() {
         if(song == null){
-            song = new SoundPlayer('battinh1.wav', SoundPlayer.MAIN_BUNDLE, () => {
-                      song.setNumberOfLoops(-1).play(()=> song.stop())
+            song = new SoundPlayer('battinh1.mp3', SoundPlayer.MAIN_BUNDLE, () => {
+                      song.setNumberOfLoops(-1).play(()=> song.release())
             })
         }
     }

@@ -5,9 +5,10 @@ import { YellowBox } from 'react-native';
 import { Icon } from 'react-native-elements'
 import { HeaderBackButton } from 'react-navigation'
 import commonStyles from '../common/Styles'
+// import SoundPlayer from 'react-native-sound';
 
 var {width, height} = Dimensions.get('window')
-var SoundPlayer = require('react-native-sound');
+var Sound = require('react-native-sound');
 // SoundPlayer.setCategory('Playback', true)
 var song = null;
 var list = [
@@ -65,8 +66,8 @@ class Softtisue1 extends Component {
 
     onPressButtonPlay() {
       if(song == null){
-          song = new SoundPlayer('softtisue2.mp3', SoundPlayer.MAIN_BUNDLE, () => {
-                  song.setNumberOfLoops(-1).play(()=>song.stop())
+          song = new Sound('softtisue2.mp3', Sound.MAIN_BUNDLE, () => {
+                  song.setNumberOfLoops(-1).play()
           });
       }
   }
@@ -98,7 +99,7 @@ class Softtisue1 extends Component {
         if(this.state.icon === "unmute"){
             if (state === "idle") {
                 song.stop().release()
-                song = new SoundPlayer(this.state.name, SoundPlayer.MAIN_BUNDLE, () => {
+                song = new Sound(this.state.name, Sound.MAIN_BUNDLE, () => {
                     song.setNumberOfLoops(-1).play(()=>song.release())
                 });
             }
@@ -164,7 +165,7 @@ render() {
                   <Text style={styles.semiButtonText}>
                   Dùng băng thun quấn vùng bị tổn thương, nâng cao phần bị tổn thương và chườm đá để giảm đau.
                   </Text>
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', top: height/2.75,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>
                       <View style={commonStyles.overlay}/>
                       <Icon name = {this.state.icon} type='octicon' size={25}/>
                     </TouchableOpacity>
@@ -183,7 +184,7 @@ render() {
                   rạn nứt xương hay không.
                   </Text>
                   
-                    <TouchableOpacity style={{ flex: 1,position: 'absolute', top: height/2.75,margin: 15, height: 40,  right: 0.1, width: 40, justifyContent: 'center'}} onPress={this.onPressButtonMute.bind(this)}>    
+                    <TouchableOpacity style={commonStyles.muteButton} onPress={this.onPressButtonMute.bind(this)}>    
                       <View style={commonStyles.overlay}/>
                       <Icon name={this.state.icon} type='octicon' size={25} color='#000000'/>
                     </TouchableOpacity>
